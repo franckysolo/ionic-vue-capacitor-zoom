@@ -1,0 +1,16 @@
+{
+  "appId": "com.example.app",
+  "appName": "App",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www",
+  "server": {
+    "url": "http://0.0.0.0:8080"
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh"
+}

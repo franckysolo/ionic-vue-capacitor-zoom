@@ -4,11 +4,26 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest=www",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@angular/core": "^9.0.7",
+    "@capacitor/android": "^2.0.0-beta.0",
+    "@capacitor/cli": "^2.0.0-beta.0",
+    "@capacitor/core": "^2.0.0-beta.0",
+    "@ionic-native/core": "^5.22.0",
+    "@ionic-native/zoom": "^5.22.0",
+    "@ionic/core": "^5.0.5",
+    "@ionic/pwa-elements": "^1.5.1",
+    "cordova-android": "^8.1.0",
+    "cordova-plugin-androidx": "^1.0.2",
+    "cordova-plugin-androidx-adapter": "^1.1.0",
+    "cordova.plugin.zoom": "^4.4.5513-0.712",
     "core-js": "^3.6.4",
+    "ionic": "^5.4.16",
+    "jetifier": "^1.6.5",
+    "rxjs": "^6.5.4",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -19,6 +34,18 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "postinstall": "jetifier",
+  "cordova": {
+    "preferences": {
+      "DisableDeploy": "true",
+      "CameraUsesGeolocation": "true"
+    },
+    "plugins": {
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-androidx-adapter": {},
+      "cordova.plugin.zoom": {}
+    }
   },
   "eslintConfig": {
     "root": true,
