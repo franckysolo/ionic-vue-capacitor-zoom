@@ -4,9 +4,6 @@
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "www",
-  "server": {
-    "url": "http://0.0.0.0:8080"
-  },
   "android": {
     "allowMixedContent": true,
     "captureInput": true,

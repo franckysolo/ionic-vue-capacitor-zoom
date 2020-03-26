@@ -18,11 +18,11 @@
           <ion-list v-if="!loggedIn">
             <ion-item>
               <ion-label position="stacked">Nom d'utilisateur</ion-label>
-              <ion-input type="text" @input="username = $event.target.value" :value="username"></ion-input>
+              <ion-input type="text" :value="username"></ion-input>
             </ion-item>
             <ion-item>
               <ion-label position="stacked">Mot de passe</ion-label>
-              <ion-input type="password" @input="password = $event.target.value" :value="password"></ion-input>
+              <ion-input type="password" :value="password"></ion-input>
             </ion-item>
           </ion-list>
           <ion-button v-if="!loggedIn" expand="full" @click="loginToZoom">
@@ -82,8 +82,8 @@ export default {
       zoom: null,
       initialize: false,
       loggedIn: false,
-      username: 'asdfasdfasdfasdfasdf',
-      password: 'ashcmhqimomximhimhdsoansdiufnaiosuncviluansviunaeivavjnjk;nv;iln',
+      username: 'franckysolo@gmail.com',
+      password: 'Daddycool212',
       meetingNumber: '',
       meetingPassword: '',
       displayName: 'Zoom Ionic Vuejs Capacitor'
@@ -103,19 +103,16 @@ export default {
     }
   },
   methods: {
-     loginToZoom () {
-      this.zoom.login(this.username, this.password).then(success => {
-        window.console.log(success)
-        if (success) {
+     async loginToZoom () {
+      let result = await this.zoom.login(this.username, this.password)
+        if (result) {
           this.loggedIn = true
           this.username = ''
           this.password = ''
           this.toast('Zoom login successfull')
+        } else {
+          this.toast('Cannot login to Zoom')
         }
-      }).catch (error => {
-        window.console.log(error)
-        this.toast(error.message)
-      })
     },
     async logoutFromZoom () {
       let result = await this.zoom.logout()
