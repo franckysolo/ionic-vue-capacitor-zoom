@@ -9,5 +9,8 @@
     "captureInput": true,
     "webContentsDebuggingEnabled": true
   },
+  "ios": {
+    "cordovaLinkerFlags": ["-ObjC"]
+  },
   "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh"
 }
