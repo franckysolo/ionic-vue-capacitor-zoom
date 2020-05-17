@@ -1,6 +1,6 @@
 {
-  "appId": "com.example.app",
-  "appName": "App",
+  "appId": "com.franckysolo.ionic",
+  "appName": "CapacitorDemo",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "www",
@@ -8,9 +8,6 @@
     "allowMixedContent": true,
     "captureInput": true,
     "webContentsDebuggingEnabled": true
-  },
-  "ios": {
-    "cordovaLinkerFlags": ["-ObjC"]
   },
   "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh"
 }

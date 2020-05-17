@@ -5,34 +5,38 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest=www",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "clean": "rm -rf android/.gradle android/.idea"
   },
   "dependencies": {
-    "@angular/core": "^9.0.7",
-    "@capacitor/android": "^2.0.0-beta.0",
-    "@capacitor/cli": "^2.0.0-beta.0",
-    "@capacitor/core": "^2.0.0-beta.0",
-    "@capacitor/ios": "^1.5.2",
-    "@ionic-native/core": "^5.22.0",
-    "@ionic-native/zoom": "^5.22.0",
-    "@ionic/core": "^5.0.5",
-    "@ionic/pwa-elements": "^1.5.1",
+    "@angular/core": "^9.1.7",
+    "@capacitor/android": "^2.1.0",
+    "@capacitor/cli": "^2.1.0",
+    "@capacitor/core": "^2.1.0",
+    "@capacitor/ios": "^2.1.0",
+    "@ionic-native/badge": "^5.26.0",
+    "@ionic-native/barcode-scanner": "^5.26.0",
+    "@ionic-native/core": "^5.26.0",
+    "@ionic/core": "^5.1.1",
+    "@ionic/pwa-elements": "^1.5.2",
     "cordova-android": "^8.1.0",
     "cordova-plugin-androidx": "^1.0.2",
-    "cordova-plugin-androidx-adapter": "^1.1.0",
-    "cordova.plugin.zoom": "^4.4.5513-0.712",
-    "core-js": "^3.6.4",
+    "cordova-plugin-androidx-adapter": "^1.1.1",
+    "cordova-plugin-badge": "^0.8.8",
+    "cordova-plugin-device": "^2.0.3",
+    "core-js": "^3.6.5",
     "ionic": "^5.4.16",
     "jetifier": "^1.6.5",
-    "rxjs": "^6.5.4",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
+    "rxjs": "^6.5.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.2.0",
-    "@vue/cli-plugin-eslint": "^4.2.0",
-    "@vue/cli-service": "^4.2.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
+    "eslint": "^7.0.0",
     "eslint-plugin-vue": "^6.1.2",
     "vue-template-compiler": "^2.6.11"
   },
@@ -44,7 +48,9 @@
     "plugins": {
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
-      "cordova.plugin.zoom": {}
+      "cordova-plugin-badge": {},
+      "cordova-plugin-local-notification": {},
+      "phonegap-plugin-barcodescanner": {}
     }
   },
   "eslintConfig": {

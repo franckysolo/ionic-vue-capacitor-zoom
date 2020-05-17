@@ -1,1 +1,13 @@
-{}
+{
+  "appId": "com.franckysolo.ionic",
+  "appName": "CapacitorDemo",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "linuxAndroidStudioPath": "/opt/android-studio/bin/studio.sh"
+}

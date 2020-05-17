@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import IonicVue from '@ionic/vue'
-
+import { Badge } from '@ionic-native/badge'
 import { defineCustomElements } from '@ionic/pwa-elements/loader'
 
 import '@ionic/core/css/core.css'
@@ -16,6 +16,9 @@ Vue.config.ignoredElements.push(/^ion-/)
 new Vue({
   router,
   render: h => h(App),
+  mounted () {
+    Badge.set(10)
+  }
 }).$mount('#app')
 
 defineCustomElements(window)

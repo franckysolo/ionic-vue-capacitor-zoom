@@ -9,10 +9,10 @@
 
       <ion-button @click="displayToast">Afficher message surgissant</ion-button>
       <ion-button @click="takePicture">Prendre une photo</ion-button>
-      <ion-button @click="nextPage">Zoom Conférence</ion-button>
-      <ion-button @click="scan">Scanner un code barre</ion-button>
+      <!-- <ion-button @click="nextPage">Zoom Conférence</ion-button> -->
+      <ion-button @click="$router.push('/scan')">Scanner un code barre</ion-button>
 
-      <div class="ion-padding">
+      <div class="ion-padding" v-if="image">
         <img :src="image" alt="Image">
       </div>
     </ion-content>
@@ -51,9 +51,6 @@ export default {
        })
        window.console.log('Image from camera', file)
        this.$set(this.$data, 'image', file.dataUrl)
-    },
-    async scan () {
-
     },
     async nextPage () {
       this.$router.push('/zoom')

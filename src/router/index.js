@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import { IonicVueRouter } from '@ionic/vue'
 import CameraPage from '@/components/CameraPage'
-import ZoomPage from '@/components/ZoomPage'
+// import ZoomPage from '@/components/ZoomPage'
+import ScanPage from '@/components/ScanPage'
 
 Vue.use(IonicVueRouter)
 
@@ -11,10 +12,15 @@ const routes = [
     name: 'home',
     component: CameraPage,
   },
+  // {
+  //   path: '/zoom',
+  //   name: 'zoom',
+  //   component: ZoomPage,
+  // },
   {
-    path: '/zoom',
-    name: 'zoom',
-    component: ZoomPage,
+    path: '/scan',
+    name: 'scan',
+    component: ScanPage,
   }
 ]
 
