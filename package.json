@@ -19,6 +19,7 @@
     "@ionic-native/core": "^5.26.0",
     "@ionic/core": "^5.1.1",
     "@ionic/pwa-elements": "^1.5.2",
+    "@ionic/vue": "^0.0.9",
     "cordova-android": "^8.1.0",
     "cordova-plugin-androidx": "^1.0.2",
     "cordova-plugin-androidx-adapter": "^1.1.1",
@@ -49,7 +50,6 @@
       "cordova-plugin-androidx": {},
       "cordova-plugin-androidx-adapter": {},
       "cordova-plugin-badge": {},
-      "cordova-plugin-local-notification": {},
       "phonegap-plugin-barcodescanner": {}
     }
   },
