@@ -1,13 +1,6 @@
 <template>
   <div class="ion-page">
-    <ion-header>
-      <ion-toolbar class="toolbar-md-primary">
-        <ion-title>Capacitor - Zoom - VueJS</ion-title>
-        <ion-buttons slot="start">
-          <ion-back-button default-href="/"></ion-back-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+    <toolbar />
     <ion-content padding>
       <ion-card>
         <ion-card-header color="primary">
@@ -70,6 +63,7 @@
 </template>
 
 <script>
+import Toolbar from '@/components/Toolbar'
 import { Zoom } from '@ionic-native/zoom/ngx'
 import toast from '@/mixins/toast'
 import * as credentials from '@/config'
@@ -77,6 +71,9 @@ import * as credentials from '@/config'
 export default {
   name: 'ZoomPage',
   mixins: [toast],
+  components: {
+    Toolbar
+  },
   data () {
     return {
       zoom: null,

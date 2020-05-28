@@ -1,17 +1,10 @@
 <template>
   <div class="ion-page">
-    <ion-header>
-      <ion-toolbar class="toolbar-md-primary">
-        <ion-title>Capacitor - Zoom - VueJS</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content padding>
-
-      <ion-button @click="displayToast">Afficher message surgissant</ion-button>
-      <ion-button @click="takePicture">Prendre une photo</ion-button>
-      <!-- <ion-button @click="nextPage">Zoom Conférence</ion-button> -->
-      <ion-button @click="$router.push('/scan')">Scanner un code barre</ion-button>
-
+    <toolbar />
+    <ion-content class="ion-padding">
+      <ion-button @click="takePicture">
+        <ion-label>Prendre une photo</ion-label>
+      </ion-button>
       <div class="ion-padding" v-if="image">
         <img :src="image" alt="Image">
       </div>
@@ -20,8 +13,7 @@
 </template>
 
 <script>
-
-import toast from '@/mixins/toast'
+import Toolbar from '@/components/Toolbar'
 
 import {
   Plugins,
@@ -32,16 +24,15 @@ const { Camera } = Plugins
 
 export default {
   name: 'CameraPage',
-  mixins: [toast],
+  components: {
+    Toolbar
+  },
   data () {
     return {
       image: null
     }
   },
   methods: {
-    async displayToast () {
-      this.toast('hello this is a toast message')
-    },
     async takePicture () {
       const file = await Camera.getPhoto({
          quality: 100,
@@ -51,9 +42,6 @@ export default {
        })
        window.console.log('Image from camera', file)
        this.$set(this.$data, 'image', file.dataUrl)
-    },
-    async nextPage () {
-      this.$router.push('/zoom')
     }
   }
 }

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-      <ion-vue-router id="main" />
+    <ion-app>
+      <ion-vue-router />
+    </ion-app>
   </div>
 </template>
 

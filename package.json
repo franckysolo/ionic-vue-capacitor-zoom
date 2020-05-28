@@ -30,6 +30,7 @@
     "jetifier": "^1.6.5",
     "phonegap-plugin-barcodescanner": "^8.1.0",
     "rxjs": "^6.5.5",
+    "vee-validate": "^3.3.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
