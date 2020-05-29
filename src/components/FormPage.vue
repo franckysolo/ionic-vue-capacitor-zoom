@@ -8,7 +8,7 @@
         <ion-list lines="full" class="ion-no-margin ion-no-padding">
           <ion-item class="ion-margin-bottom" lines="none">
             <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" placeholder="Entrer votre email"></ion-input>
+            <ion-input inputmode="email" type="email" placeholder="Entrer votre email"></ion-input>
           </ion-item>
           <ion-item class="ion-margin-bottom" lines="none">
             <ion-label position="floating">Mot de passe</ion-label>
@@ -66,8 +66,8 @@
 </template>
 
 <script>
-// import { Plugins } from '@capacitor/core'
-// const { Keyboard } = Plugins
+import { Plugins } from '@capacitor/core'
+const { Keyboard } = Plugins
 
 import FormComposer from '@/components/FormComposer'
 import Toolbar from '@/components/Toolbar'
@@ -90,6 +90,19 @@ export default {
     }
   },
   mounted () {
+
+    Keyboard.addListener('keyboardDidShow', info => {
+      console.log('keyboard did show with height', info.keyboardHeight)
+    })
+
+    Keyboard.addListener('keyboardWillHide', () => {
+      console.log('keyboard will hide')
+    })
+
+    Keyboard.addListener('keyboardDidHide', () => {
+      console.log('keyboard did hide')
+    })
+
     window.addEventListener('keyboardWillShow', (e) => {
       window.console.log('keyboard will show with height', e.keyboardHeight)
     })
