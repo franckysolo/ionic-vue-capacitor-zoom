@@ -8,7 +8,7 @@
         <ion-list lines="full" class="ion-no-margin ion-no-padding">
           <ion-item class="ion-margin-bottom" lines="none">
             <ion-label position="floating">Email</ion-label>
-            <ion-input inputmode="email" type="email" placeholder="Entrer votre email"></ion-input>
+            <ion-input v-focus inputmode="email" type="email" placeholder="Entrer votre email"></ion-input>
           </ion-item>
           <ion-item class="ion-margin-bottom" lines="none">
             <ion-label position="floating">Mot de passe</ion-label>
@@ -74,6 +74,7 @@ import Toolbar from '@/components/Toolbar'
 import definition from '@/forms/login'
 import formMixin from '@/mixins/form'
 import toastMixin from '@/mixins/toast'
+import focus from '@/directives/focus'
 
 export default {
   name: 'FormPage',
@@ -81,6 +82,7 @@ export default {
     FormComposer,
     Toolbar
   },
+  directives: {focus},
   mixins: [formMixin, toastMixin],
   data () {
     return {
