@@ -47,6 +47,10 @@ export default {
         {
           label: 'Tester les notifications et badge',
           path: '/badge'
+        },
+        {
+          label: 'Tester la géolocalisation',
+          path: '/geolocation'
         }
       ]
     }

@@ -31,7 +31,8 @@
     "phonegap-plugin-barcodescanner": "^8.1.0",
     "rxjs": "^6.5.5",
     "vee-validate": "^3.3.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.1",

@@ -66,6 +66,9 @@
 </template>
 
 <script>
+// import { Plugins } from '@capacitor/core'
+// const { Keyboard } = Plugins
+
 import FormComposer from '@/components/FormComposer'
 import Toolbar from '@/components/Toolbar'
 import definition from '@/forms/login'
@@ -85,6 +88,23 @@ export default {
       email: '',
       password: ''
     }
+  },
+  mounted () {
+    window.addEventListener('keyboardWillShow', (e) => {
+      window.console.log('keyboard will show with height', e.keyboardHeight)
+    })
+
+    window.addEventListener('keyboardDidShow', (e) => {
+      window.console.log("keyboard did show with height", e.keyboardHeight)
+    })
+
+    window.addEventListener('keyboardWillHide', () => {
+      window.console.log('keyboard will hide');
+    })
+
+    window.addEventListener('keyboardDidHide', () => {
+      window.console.log('keyboard did hide');
+    })
   },
   methods: {
     async handleLogin () {

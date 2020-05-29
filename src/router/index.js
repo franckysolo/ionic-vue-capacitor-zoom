@@ -6,6 +6,7 @@ import CameraPage from '@/components/CameraPage'
 import ScanPage from '@/components/ScanPage'
 import FormPage from '@/components/FormPage'
 import BadgePage from '@/components/BadgePage'
+import GeolocationPage from '@/components/GeolocationPage'
 
 Vue.use(IonicVueRouter)
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/scan',
     name: 'scan',
     component: ScanPage,
+  },
+  {
+    path: '/geolocation',
+    name: 'geolocation',
+    component: GeolocationPage,
   },
   {
     path: '/badge',
