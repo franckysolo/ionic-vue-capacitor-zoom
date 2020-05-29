@@ -92,15 +92,19 @@ export default {
   mounted () {
 
     Keyboard.addListener('keyboardDidShow', info => {
-      console.log('keyboard did show with height', info.keyboardHeight)
+        window.console.log('keyboard will did show with height', info.keyboardHeight)
+    })
+
+    Keyboard.addListener('keyboardDidShow', info => {
+        window.console.log('keyboard did show with height', info.keyboardHeight)
     })
 
     Keyboard.addListener('keyboardWillHide', () => {
-      console.log('keyboard will hide')
+        window.console.log('keyboard will hide')
     })
 
     Keyboard.addListener('keyboardDidHide', () => {
-      console.log('keyboard did hide')
+        window.console.log('keyboard did hide')
     })
 
     window.addEventListener('keyboardWillShow', (e) => {
