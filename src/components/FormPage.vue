@@ -92,38 +92,39 @@ export default {
     }
   },
   mounted () {
+    if (Keyboard) {
+      Keyboard.addListener('keyboardDidShow', info => {
+          window.console.log('keyboard will did show with height', info.keyboardHeight)
+      })
 
-    Keyboard.addListener('keyboardDidShow', info => {
-        window.console.log('keyboard will did show with height', info.keyboardHeight)
-    })
+      Keyboard.addListener('keyboardDidShow', info => {
+          window.console.log('keyboard did show with height', info.keyboardHeight)
+      })
 
-    Keyboard.addListener('keyboardDidShow', info => {
-        window.console.log('keyboard did show with height', info.keyboardHeight)
-    })
+      Keyboard.addListener('keyboardWillHide', () => {
+          window.console.log('keyboard will hide')
+      })
 
-    Keyboard.addListener('keyboardWillHide', () => {
-        window.console.log('keyboard will hide')
-    })
+      Keyboard.addListener('keyboardDidHide', () => {
+          window.console.log('keyboard did hide')
+      })
 
-    Keyboard.addListener('keyboardDidHide', () => {
-        window.console.log('keyboard did hide')
-    })
+      window.addEventListener('keyboardWillShow', (e) => {
+        window.console.log('keyboard will show with height', e.keyboardHeight)
+      })
 
-    window.addEventListener('keyboardWillShow', (e) => {
-      window.console.log('keyboard will show with height', e.keyboardHeight)
-    })
+      window.addEventListener('keyboardDidShow', (e) => {
+        window.console.log("keyboard did show with height", e.keyboardHeight)
+      })
 
-    window.addEventListener('keyboardDidShow', (e) => {
-      window.console.log("keyboard did show with height", e.keyboardHeight)
-    })
+      window.addEventListener('keyboardWillHide', () => {
+        window.console.log('keyboard will hide');
+      })
 
-    window.addEventListener('keyboardWillHide', () => {
-      window.console.log('keyboard will hide');
-    })
-
-    window.addEventListener('keyboardDidHide', () => {
-      window.console.log('keyboard did hide');
-    })
+      window.addEventListener('keyboardDidHide', () => {
+        window.console.log('keyboard did hide');
+      })
+    }
   },
   methods: {
     async handleLogin () {

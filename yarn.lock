@@ -3,9 +3,9 @@
 
 
 "@angular/core@^9.1.7":
-  version "9.1.7"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.1.7.tgz#0465c26d9101389602e3ff9e502f83f3655e9fe1"
-  integrity sha512-uJSZ+rdGL47gc3A+Fal1XwJYB4WWpYJrNifvoQ2nOs+X5Qu+j0HN6GXPJb4kixoNzjYCGxmLoirdT3xhNZFcfQ==
+  version "9.1.9"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.1.9.tgz#db4241f867d6e14b81ed6e7c50334813c6ebfc10"
+  integrity sha512-q/DERgVU6vK2LtTcdVCGGBcoO424WsEfImh3Vcuy+P/ZVmthlDUC/+q+tSKt8MMf4hLpxFDQJE8vUSkktj7QEw==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
@@ -802,14 +802,14 @@
     to-fast-properties "^2.0.0"
 
 "@capacitor/android@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-2.1.0.tgz#09dd063bb90424fb7fda9a86113584ace6072c88"
-  integrity sha512-20t6Ep4cVp6X/7tz3BzvNyqv6WEMfZr4VLA3nQC7WxTLfrYSWWaP8vaKvTFn8u56qCSoCUwYmYlpkib38ptwJg==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-2.1.2.tgz#1b46359b981753b5d0950ad0e37db223402ec0ad"
+  integrity sha512-V24ZwerrFFWkcLYxhoofhg3Hv4BxH76EFr2zeVJOJkiY9yffey0VMjaE10QPyFrSIshbDtEsYwm2gxUc4wxgjA==
 
 "@capacitor/cli@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-2.1.0.tgz#de77a4303e2af76fe5438b8851e3c67b7170f979"
-  integrity sha512-j7TPvnQ++xFlZ5hhvdntwK79/Xx+Bns6Y11b5Cco8ydVO4HokQresBRqpU2LaHzABZtWmtrSsFJMF3OqZotguQ==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-2.1.2.tgz#d4354308e5912728815d88cabfca2c6b3212cbc5"
+  integrity sha512-xxkkEKCjQAVvFO5UwnBqAMQ/UcmTQfKAVPBGIqTxT20sqPVxqMq4INGJyB+qu+6pbe7KwZKywBS7/zFMw+Ngtg==
   dependencies:
     chalk "^2.3.0"
     commander "^2.12.2"
@@ -824,16 +824,16 @@
     xml2js "^0.4.19"
 
 "@capacitor/core@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-2.1.0.tgz#11178b082c9f00bcff7c7f13f5cb68d07a85aad6"
-  integrity sha512-KIDj067PGaNSIODqzDp99vPs7CVpx+SRVrfgcQ9MNvpTUFsnDx/taRixbucizj8lLH2mhK12dH/4TjU7eqXQ4A==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-2.1.2.tgz#d710b2a873f8c9ba1184a67f6c27bdb2a3a0a4af"
+  integrity sha512-oi+n23h9cJ/yaeMIlrnoeCV5p7pv2XWdT+cXzwh9j72LV+Y/oSGcNgFWGEAR/B1UVlv6LnLLQSs9CUXhNlh+Nw==
   dependencies:
     tslib "^1.9.0"
 
 "@capacitor/ios@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-2.1.0.tgz#490a9a58896f911f80727fa2e9e86b31e84d9d9e"
-  integrity sha512-KE5hGQiv86Ply/WvT5OvrRBcbM+XdqbGkfp03hK8TG8tYNvJw4mXT3+bH5QsOVOI23o4LVzRWtwPmDyxCw+Pyw==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-2.1.2.tgz#78bb5662a182ea49da27763543d7e863d73ffdb4"
+  integrity sha512-WVLZl/QQfb8YAhHth0gKS6zlwOXL1du2ZoJIDxXt1m0/xHufo4Ch+OUzvQyLaySX7J1bB08yrlZG2HKXzEcefw==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -8973,9 +8973,9 @@ vary@~1.1.2:
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
 vee-validate@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.3.0.tgz#9f426831cbf8394860b948b30a7bcc6d2b5d173b"
-  integrity sha512-+QQZgA0I9ZTDsYNOSFlUqOvGIqW4yxjloxQCC6TD0rPn407G9hifn6RnId8kzl6+zHfl3/dE+bko49mYzgNNGg==
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.3.2.tgz#2eba99ea0bc6d5c76c999dd4f298dbcb32edb17e"
+  integrity sha512-Q/Fo8E34xa4K6oVd8CTPLG8ZXn7JziinN7sJgvAWt78moI67tFGqbot+mY1hUPh9ZMb/pWPoSNOnGxeEc/Vsyw==
 
 vendors@^1.0.0:
   version "1.0.4"
