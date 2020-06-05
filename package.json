@@ -32,7 +32,8 @@
     "rxjs": "^6.5.5",
     "vee-validate": "^3.3.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.3.2"
+    "vue-router": "^3.3.2",
+    "webpack-bundle-analyzer": "^3.8.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.1",

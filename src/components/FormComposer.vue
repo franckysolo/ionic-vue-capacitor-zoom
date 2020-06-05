@@ -353,7 +353,8 @@
 </template>
 
 <script>
-import _ from 'lodash'
+//import _ from 'lodash'
+import { map } from 'lodash/core'
 import formMixin from '@/mixins/form'
 import logger from '@/mixins/logger'
 import filesystemMixin from '@/mixins/filesystem'
@@ -424,13 +425,13 @@ export default {
      * @return {Void}
      */
     populate (values) {
-      _.map(values, (value, key) => {
+      map(values, (value, key) => {
         this.fill(key, value)
       })
     },
     resetForm () {
       this.removeSpinner()
-      _.map(this.form, (value, key) => {
+      map(this.form, (value, key) => {
         this.fill(key, '')
       })
     },

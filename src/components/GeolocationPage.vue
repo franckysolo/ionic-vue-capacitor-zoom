@@ -45,22 +45,28 @@ export default {
     }
   },
   async beforeDestroy () {
-    await Geolocation.clearWatch()
+    if (Geolocation) {
+      await Geolocation.clearWatch()
+    }
   },
   methods: {
     async getCurrentPosition () {
-      let position = await Geolocation.getCurrentPosition()
-      this.$set(this.$data, 'position', position)
-      this.watchPosition()
+      if (Geolocation) {
+        let position = await Geolocation.getCurrentPosition()
+        this.$set(this.$data, 'position', position)
+        this.watchPosition()
+      }
     },
     async watchPosition () {
       let vm = this
-      await Geolocation.clearWatch()
-      await Geolocation.watchPosition({}, (position, err) => {
-        if (!err) {
-          vm.$set(vm.$data, 'position', position)
-        }
-      })
+      if (Geolocation) {
+        await Geolocation.clearWatch()
+        await Geolocation.watchPosition({}, (position, err) => {
+          if (!err) {
+            vm.$set(vm.$data, 'position', position)
+          }
+        })
+      }
     }
   }
 }

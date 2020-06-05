@@ -14,6 +14,3 @@ export default {
   name: 'Toolbar'
 }
 </script>
-
-<style lang="css" scoped>
-</style>

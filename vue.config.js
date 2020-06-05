@@ -1,3 +1,4 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const webpack = require('webpack')
 const path = require('path')
 const pattern =  /\@angular(\\|\/)core(\\|\/)fesm5/
@@ -5,8 +6,15 @@ const sourceDirectory = path.join(__dirname, 'src')
 
 module.exports = {
   configureWebpack: {
+      optimization: {
+         splitChunks: {
+           minSize: 10000,
+           maxSize: 250000,
+         }
+      },
       plugins: [
-        new webpack.ContextReplacementPlugin(pattern, sourceDirectory)
+        new webpack.ContextReplacementPlugin(pattern, sourceDirectory),
+        new BundleAnalyzerPlugin()
       ]
    },
    chainWebpack: config => {
