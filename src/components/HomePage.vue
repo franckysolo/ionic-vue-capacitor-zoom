@@ -41,6 +41,10 @@ export default {
           path: '/forms'
         },
         {
+          label: 'Tester les champs input',
+          path: '/debug'
+        },
+        {
           label: 'Tester l\'appareil photo',
           path: '/photos'
         },

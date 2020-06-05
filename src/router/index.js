@@ -6,6 +6,7 @@ import CameraPage from '@/components/CameraPage'
 import ScanPage from '@/components/ScanPage'
 import FormPage from '@/components/FormPage'
 import BadgePage from '@/components/BadgePage'
+import DebugPage from '@/components/DebugPage'
 import GeolocationPage from '@/components/GeolocationPage'
 
 Vue.use(IonicVueRouter)
@@ -40,6 +41,11 @@ const routes = [
     path: '/forms',
     name: 'forms',
     component: FormPage,
+  },
+  {
+    path: '/debug',
+    name: 'debug',
+    component: DebugPage,
   },
   // {
   //   path: '/zoom',
