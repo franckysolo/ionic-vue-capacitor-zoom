@@ -19,8 +19,12 @@
 </template>
 
 <script>
+import Toolbar from '@/components/Toolbar'
 export default {
-  name: 'DebugPage'
+  name: 'DebugPage',
+  components: {
+    Toolbar
+  }
 }
 </script>
 
